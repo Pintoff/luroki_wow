@@ -711,12 +711,17 @@ export default {
     overflow: visible;
     padding: 15px;
     position: relative;
-    width: 150px;
+    width: 160px;
     font-family: "Archivo", "Archivo Placeholder", sans-serif;
     font-size: 16px;
     font-weight: 700;
     text-align: center;
     color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.join:hover { 
+    transform: scale(1.05); 
 }
 
 .call_action_button .learn {
@@ -735,11 +740,16 @@ export default {
     padding: 15px;
     position: relative;
     /* width: min-content; */
-    width: 150px;
+    width: 160px;
     font-family: "Archivo", "Archivo Placeholder", sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn:hover {
+    transform: scale(1.05);
 }
 
 .main_update {

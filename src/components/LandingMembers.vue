@@ -175,6 +175,11 @@ main {
     overflow: visible;
     padding: 40px;
     position: relative;
+    transition: .3s;
+}
+
+.hero_profiles:hover > :not(:hover) {
+    opacity: .4;
 }
 
 .img_wrap {
