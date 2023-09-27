@@ -230,10 +230,30 @@ export default {
  computed: {
     },
  methods: {
+    checkBoxes(boxes) {
+        const triggerBottom = window.innerHeight / 5 * 4;
+        const arrBoxes = Array.from(boxes);
+        arrBoxes.forEach((box, idx) => {
+            console.log(idx);
+            const boxTop = box.getBoundingClientRect().top;
+            console.log('boxtop=' + boxTop);
+            console.log('triggerbottom=' + triggerBottom);
+            if (boxTop < triggerBottom) {
+                box.classList.add('show');
+            } else {
+                box.classList.remove('show');
+            }
+        });
     },
- mounted(){
+    },
+    mounted() {
+    this.$nextTick(() => {
+        const boxes = document.querySelectorAll(".metrics_card");
+        window.addEventListener('scroll', () => this.checkBoxes(boxes));
+    });
     }
 }
+
 </script>
 
 <style scoped>
@@ -403,7 +423,16 @@ export default {
     padding: 60px;
     position: relative;
     width: 100%;
-    will-change: transform;
+    transform: translateX(200%);
+    transition: transform 0.6s ease;
+}
+
+.metrics_card:nth-of-type(even) {
+    transform: translateX(-200%);
+}
+
+.metrics_card.show {
+    transform: translateX(0) !important;
 }
 
 .metrics_card_icon .svg_wrap {
