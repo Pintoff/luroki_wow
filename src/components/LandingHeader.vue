@@ -12,7 +12,7 @@
                         <router-link to="/raids"><p>Raids</p></router-link>
                     </div>
                     <div class="header_items">
-                        <p>Reward system</p>
+                        <router-link to="/login"><p>Reward system</p></router-link>
                     </div>
             </div>
             <div class="header_inner">
@@ -141,6 +141,7 @@ header {
     text-align: left;
     color: rgb(16, 69, 29);
     font-size: 20px;
+    z-index: 10;
 }
 
 .header_items p:hover {
@@ -164,20 +165,15 @@ header {
 
 .header_background {
     align-items: center;
-    /* display: flex; */
-    /* flex: 1 0 0px; */
     flex-direction: column;
-    /* flex-wrap: nowrap; */
-    /* height: 100%; */
     justify-content: space-between;
     max-width: 1000px;
-    /* overflow: visible; */
     padding: 0;
     position: relative;
-    /* width: 1px; */
     z-index: 1;
     height: 514px;
     position: absolute;
+    margin-top: 2vh;
 }
 
 .background_inner {

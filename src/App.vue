@@ -1,25 +1,39 @@
 <template>
-  <LandingHeader/>
+  <PreLoader :isLoading="isLoading"/>
+  <LandingHeader v-if="isLandingPage"/>
+  <HeaderOther v-else/>
   <RouterView/>
 </template>
 
 <script>
 import LandingHeader from './components/LandingHeader.vue';
+import HeaderOther from './components/HeaderOther.vue';
+import PreLoader from './components/PreLoader.vue';
+
 export default {
   name: 'App',
   components: {
     LandingHeader,
-    
+    HeaderOther,
+    PreLoader,
+
     },
   data() {
     return {
+      isLoading: true,
+      
     }
   },
  computed: {
+  isLandingPage() {
+      return this.$route.name === 'landing';
+    },
+
     },
  methods: {
     },
  mounted(){
+    this.isLoading = false;
     }
 }
 </script>

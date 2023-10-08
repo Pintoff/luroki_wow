@@ -233,11 +233,8 @@ export default {
     checkBoxes(boxes) {
         const triggerBottom = window.innerHeight / 5 * 4;
         const arrBoxes = Array.from(boxes);
-        arrBoxes.forEach((box, idx) => {
-            console.log(idx);
+        arrBoxes.forEach((box) => {
             const boxTop = box.getBoundingClientRect().top;
-            console.log('boxtop=' + boxTop);
-            console.log('triggerbottom=' + triggerBottom);
             if (boxTop < triggerBottom) {
                 box.classList.add('show');
             } else {
