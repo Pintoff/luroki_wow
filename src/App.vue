@@ -1,5 +1,5 @@
 <template>
-  <PreLoader :isLoading="isLoading"/>
+  <PreloaderComponent :isLoading="isLoading"/>
   <LandingHeader v-if="isLandingPage"/>
   <HeaderOther v-else/>
   <RouterView/>
@@ -8,14 +8,14 @@
 <script>
 import LandingHeader from './components/LandingHeader.vue';
 import HeaderOther from './components/HeaderOther.vue';
-import PreLoader from './components/PreLoader.vue';
+import PreloaderComponent from './components/PreloaderComponent.vue';
 
 export default {
   name: 'App',
   components: {
     LandingHeader,
     HeaderOther,
-    PreLoader,
+    PreloaderComponent,
 
     },
   data() {
