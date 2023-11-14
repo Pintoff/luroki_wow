@@ -646,7 +646,7 @@ export default {
     overflow: hidden;
     padding: 10px 0 0;
     position: relative;
-    width: min-content;
+    width: 50vw;
 }
 
 .call_action_title {

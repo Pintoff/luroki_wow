@@ -210,4 +210,17 @@ header {
         font-weight: 400;
     }
 }
+
+@media (max-width: 500px) {
+
+.header_inner h1 {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 48px;
+    line-height: 1em;
+    text-align: center;
+    color: rgb(16, 69, 29);
+    font-weight: 400;
+}
+
+}
 </style>

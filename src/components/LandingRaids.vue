@@ -148,4 +148,17 @@ main {
         height: 168px;
     }
 }
+
+@media (max-width: 700px) {
+    .raid_collection {
+        grid-template-columns: repeat(1,minmax(120px,1fr));
+    }
+
+    .raid_item {
+        border-radius: 20px;
+        height: 25vh;
+    }
+}
+
+
 </style>

@@ -129,4 +129,17 @@ header {
         font-weight: 400;
     }
 }
+
+@media (max-width: 500px) {
+    .header_items {
+    font-size: 18px;
+}
+
+
+.header_line {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+}
 </style>
